@@ -17,7 +17,7 @@ window.SMOKE = {
    которая поведёт к оплате — числитель исхода; второй оффер — payment_click_new),
    click_<имя> (каждая прочая кнопка и ссылка; кнопка оплаты шлёт и своё
    click_pay_<тариф>), feature_<имя> (функции), form_start / form_submit_click
-   (намерение), email_submit (почта о запуске на pay.html), scroll_25/50/75/100,
+   (намерение), email_submit (почта о запуске на pay.html), прокрутка — карта скроллинга Метрики и scroll GA4,
    price_view. Время на странице — штатный показатель обоих счётчиков.
 
    Разметка страницы:
@@ -101,7 +101,12 @@ window.SMOKE = {
 
   /* Единая точка события: цель Метрики «Целевое событие» с тем же
      идентификатором (условие «Совпадает») и, за рубежом, событие GA4. */
+  /* Клики, кроме кнопок оплаты, просмотры блоков, кроме start/price/pay_view, и прокрутку пишут карта
+     кликов, карта скроллинга и Вебвизор Метрики и событие scroll GA4 — своими событиями они не шлются
+     (слово Владельца 28.10.2026, РК-13; правило — прибор «Рекламы» schetchiki.py, DROP_RE). */
+  var DROP = /^(scroll_\d+$|feature_|cta_|click_(?!pay_)|(?!(start|price|pay)_view$)[a-z0-9_]+_view$)/;
   function track(name, params) {
+    if (DROP.test(name)) return;
     params = params || {};
     params.kit = S.KIT;
     try { if (S.METRIKA_ID && window.ym) ym(S.METRIKA_ID, "reachGoal", name, params); } catch (e) {}
@@ -148,17 +153,6 @@ window.SMOKE = {
     }
     document.addEventListener("focusin", f, true);
     document.addEventListener("change", f, true);
-  }
-
-  function wireScroll() {
-    var steps = [25, 50, 75, 100];
-    function f() {
-      var h = document.documentElement, max = h.scrollHeight - h.clientHeight, pct, i;
-      pct = max > 0 ? Math.round(100 * (window.pageYOffset || h.scrollTop) / max) : 100;
-      if (pct >= 99) pct = 100;
-      for (i = 0; i < steps.length; i++) { if (pct >= steps[i]) once("scroll_" + steps[i]); }
-    }
-    window.addEventListener("scroll", f, { passive: true });
   }
 
   function wireViews() {
@@ -220,7 +214,7 @@ window.SMOKE = {
   }
 
   function start() {
-    keepMarks(); consent(); wireClicks(); wireIntents(); wireScroll(); wireViews(); payPage();
+    keepMarks(); consent(); wireClicks(); wireIntents(); wireViews(); payPage();
   }
   if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", start); } else { start(); }
 })();
