@@ -8,6 +8,10 @@
 <meta name="description" content="Нужна квота на высокотехнологичную медпомощь? Проверим комплект документов по порядку Минздрава, покажем, чего не хватает, и сроки комиссии.">
 <link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="variant.css">
 <script src="smoke.js" defer></script>
 <!-- faq-jsonld:start -->
 <script type="application/ld+json">
@@ -62,38 +66,68 @@
 </head>
 <body>
 
-<header><div class="wrap">
-  <div class="logo"><a href="index.html" data-ev="click_logo_home">Положено</a></div>
-  <nav class="top"><a href="#chto" data-ev="click_nav_chto">Что вы получаете</a><a href="price.html" data-ev="click_nav_cena">Цена</a><a href="#primer" data-ev="click_nav_primer">Пример</a><a href="#start" data-ev="click_nav_start">Начать</a></nav>
+<header><div class="shell">
+  <a class="home" href="index.html" data-ev="click_logo_home">Положено</a>
+  <nav><a href="#chto" data-ev="click_nav_chto">Что вы получаете</a><a href="price.html" data-ev="click_nav_cena">Цена</a><a href="#primer" data-ev="click_nav_primer">Пример</a><a href="#start" data-ev="click_nav_start">Начать</a></nav>
 </div></header>
 
-<div class="wrap">
-  <div class="hero">
-    <h1>Квота на высокотехнологичную помощь — проверим комплект документов и сроки, чтобы заявка не застряла</h1>
-    <p class="sub">Для пациентов и родственников: вы присылаете направление, выписку и то, что уже собрано, а получаете список по порядку Минздрава — что есть, чего не хватает, кто это оформляет и в какой срок обязаны ответить.</p>
-    <a class="cta" href="price.html" data-ev="cta_click">Мне это нужно</a>
-    <p class="cta-note">Ранний доступ · Оплата на этой странице пока не принимается</p>
-  </div>
+<main class="shell">
+  <section class="split">
+    <div class="stack">
+      <p class="meta rise"><span class="dot"></span> Для пациентов и родственников</p>
+      <h1 class="rise" style="--i:1" data-len="long">Квота на высокотехнологичную помощь&nbsp;<span class="soft">— проверим комплект документов и сроки, чтобы заявка не застряла</span></h1>
+      <p class="rise" style="--i:2">Для пациентов и родственников: вы присылаете направление, выписку и то, что уже собрано, а получаете список по порядку Минздрава — что есть, чего не хватает, кто это оформляет и в какой срок обязаны ответить.</p>
+      <a class="button rise" style="--i:3" href="price.html" data-ev="cta_click">Мне это нужно</a>
+      <p class="meta rise" style="--i:4">Ранний доступ · Оплата на этой странице пока не принимается</p>
+    </div>
+    <figure class="window rise" style="--i:2"><svg aria-hidden="true" focusable="false" class="shot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#eef2f7" /><rect x="80" y="80" width="1040" height="640" rx="24" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><text x="120" y="155" font-size="40" font-weight="600" fill="#0a1524">Квота</text><line x1="120" y1="200" x2="1080" y2="200" stroke="#dde2ea" stroke-width="3" /><rect x="120" y="250" width="44" height="44" rx="8" fill="#12397a" /><text x="190" y="282" font-size="32" fill="#0a1524">по порядку</text><rect x="120" y="370" width="44" height="44" rx="8" fill="#dfe8f7" /><text x="190" y="402" font-size="32" fill="#0a1524">не хватает</text><rect x="120" y="490" width="44" height="44" rx="8" fill="#dfe8f7" /><text x="190" y="522" font-size="32" fill="#0a1524">рабочих дней</text><rect x="120" y="610" width="300" height="22" rx="11" fill="#dde2ea" /><rect x="680" y="250" width="390" height="420" rx="20" fill="#dfe8f7" /><text x="710" y="320" font-size="34" font-weight="600" fill="#0a1524">сроки</text><rect x="720" y="380" width="310" height="52" rx="26" fill="#12397a" /><rect x="720" y="460" width="310" height="52" rx="26" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><rect x="720" y="540" width="310" height="52" rx="26" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /></svg></figure>
+    <dl class="facts">
+      <div><dt>Для</dt><dd>Пациентов и родственников</dd></div>
+      <div><dt>Комплект</dt><dd>Список по порядку Минздрава</dd></div>
+      <div><dt>Как</dt><dd>Присылаете направление</dd></div>
+      <div><dt>Доступ</dt><dd>Ранний доступ</dd></div>
+    </dl>
+  </section>
 
   <section id="chto" data-view="features_view">
-    <h2>Что вы получаете</h2>
-    <div class="grid">
-      <div class="card"><b>Комплект по порядку</b><span>Что прилагается к направлению по приказу № 186н.</span><br><a class="btn" href="price.html" data-ev="feature_komplekt">Мне это нужно</a></div>
-      <div class="card"><b>Чего не хватает</b><span>Список пробелов и кто должен их закрыть.</span><br><a class="btn" href="price.html" data-ev="feature_probely">Мне это нужно</a></div>
-      <div class="card"><b>Сроки под контролем</b><span>Сколько дней у медорганизации и комиссии.</span><br><a class="btn" href="price.html" data-ev="feature_sroki">Мне это нужно</a></div>
-      <div class="card"><b>Если отказ или тишина</b><span>Текст обращения и адресат — на случай просрочки.</span><br><a class="btn" href="price.html" data-ev="feature_obrashchenie">Мне это нужно</a></div>
+    <div class="stack"><h2>Что вы получаете</h2></div>
+    <div class="bento">
+      <article class="tile stack reveal">
+        <div class="art"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#eef2f7" /><rect x="80" y="70" width="640" height="460" rx="22" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><text x="120" y="145" font-size="32" font-weight="600" fill="#0a1524">Комплект по порядку</text><rect x="140" y="210" width="48" height="48" rx="8" fill="#ffffff" stroke="#12397a" stroke-width="4" /><rect x="220" y="222" width="280" height="24" rx="12" fill="#b9c3d2" /><polyline points="150,236 160,246 178,224" fill="none" stroke="#12397a" stroke-width="4" /><rect x="140" y="310" width="48" height="48" rx="8" fill="#ffffff" stroke="#12397a" stroke-width="4" /><rect x="220" y="322" width="240" height="24" rx="12" fill="#dde2ea" /><polyline points="150,336 160,346 178,324" fill="none" stroke="#12397a" stroke-width="4" /><rect x="140" y="410" width="48" height="48" rx="8" fill="#ffffff" stroke="#12397a" stroke-width="4" /><rect x="220" y="422" width="200" height="24" rx="12" fill="#dde2ea" /></svg></div>
+        <h3>Комплект по порядку</h3><p>Что прилагается к направлению по приказу № 186н.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_komplekt">Мне это нужно</a>
+      </article>
+      <article class="tile stack reveal">
+        <div class="art"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#eef2f7" /><rect x="80" y="70" width="640" height="460" rx="22" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><text x="120" y="145" font-size="32" font-weight="600" fill="#0a1524">Чего не хватает</text><rect x="150" y="210" width="36" height="36" rx="8" fill="#dfe8f7" /><rect x="210" y="216" width="340" height="24" rx="12" fill="#dde2ea" /><rect x="150" y="290" width="36" height="36" rx="8" fill="#dfe8f7" /><rect x="210" y="296" width="260" height="24" rx="12" fill="#dde2ea" /><rect x="150" y="370" width="36" height="36" rx="8" fill="#dfe8f7" /><rect x="210" y="376" width="300" height="24" rx="12" fill="#12397a" /><rect x="150" y="450" width="36" height="36" rx="8" fill="#dfe8f7" /><rect x="210" y="456" width="180" height="24" rx="12" fill="#dde2ea" /></svg></div>
+        <h3>Чего не хватает</h3><p>Список пробелов и кто должен их закрыть.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_probely">Мне это нужно</a>
+      </article>
+      <article class="tile stack reveal">
+        <div class="art"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#eef2f7" /><rect x="80" y="70" width="640" height="460" rx="22" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><text x="120" y="145" font-size="32" font-weight="600" fill="#0a1524">Сроки под контролем</text><circle cx="400" cy="340" r="120" fill="#ffffff" stroke="#dde2ea" stroke-width="8" /><circle cx="400" cy="340" r="10" fill="#12397a" /><polyline points="400,340 400,250" fill="none" stroke="#12397a" stroke-width="6" /><polyline points="400,340 470,370" fill="none" stroke="#566174" stroke-width="6" /></svg></div>
+        <h3>Сроки под контролем</h3><p>Сколько дней у медорганизации и комиссии.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_sroki">Мне это нужно</a>
+      </article>
+      <article class="tile stack reveal">
+        <div class="art"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#eef2f7" /><rect x="80" y="70" width="640" height="460" rx="22" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><text x="120" y="145" font-size="32" font-weight="600" fill="#0a1524">Если отказ или тишина</text><rect x="160" y="200" width="480" height="280" rx="16" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><polygon points="160,200 400,340 640,200" fill="#dfe8f7" stroke="#dde2ea" stroke-width="3" /><rect x="210" y="360" width="260" height="18" rx="9" fill="#b9c3d2" /><rect x="210" y="400" width="180" height="18" rx="9" fill="#12397a" /></svg></div>
+        <h3>Если отказ или тишина</h3><p>Текст обращения и адресат — на случай просрочки.</p>
+        <a class="button quiet" href="price.html" data-ev="feature_obrashchenie">Мне это нужно</a>
+      </article>
     </div>
   </section>
 
-  <section id="primer" data-view="example_view">
-    <h2>Пример (вымышленные данные)</h2>
-    <p class="fine">Дочь собирает документы для отца, которому врач сказал, что нужна операция по квоте. На руках — выписка и копии паспорта и полиса. Проверка показывает, что в выписке нет кода диагноза, а согласия на обработку персональных данных нет вовсе. Дочь просит врача дополнить выписку, отец подписывает согласие, и комплект уходит из поликлиники полным. Когда через две недели решения комиссии всё нет, у неё уже есть готовый текст обращения с указанием срока.</p>
-    <a class="cta" href="price.html" data-ev="click_cta_after_example">Выбрать тариф</a>
+  <section id="primer" data-view="example_view" class="split flip">
+    <div class="stack">
+      <h2>Пример</h2>
+      <p>Дочь собирает документы для отца, которому врач сказал, что нужна операция по квоте. На руках — выписка и копии паспорта и полиса. Проверка показывает, что в выписке нет кода диагноза, а согласия на обработку персональных данных нет вовсе. Дочь просит врача дополнить выписку, отец подписывает согласие, и комплект уходит из поликлиники полным. Когда через две недели решения комиссии всё нет, у неё уже есть готовый текст обращения с указанием срока.</p>
+    <a class="button" href="price.html" data-ev="click_cta_after_example">Выбрать тариф</a>
+    </div>
+<svg aria-hidden="true" focusable="false" class="shot reveal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#eef2f7" /><line x1="200" y1="150" x2="1000" y2="150" stroke="#dde2ea" stroke-width="6" /><circle cx="240" cy="150" r="22" fill="#ffffff" stroke="#12397a" stroke-width="6" /><text x="178" y="230" font-size="32" font-weight="600" fill="#0a1524">выписку</text><circle cx="600" cy="150" r="22" fill="#ffffff" stroke="#12397a" stroke-width="6" /><text x="530" y="230" font-size="32" font-weight="600" fill="#0a1524">согласие</text><circle cx="960" cy="150" r="22" fill="#12397a" /><text x="890" y="230" font-size="32" font-weight="600" fill="#0a1524">комплект</text><rect x="120" y="310" width="960" height="410" rx="24" fill="#ffffff" stroke="#dde2ea" stroke-width="3" /><text x="170" y="390" font-size="36" font-weight="600" fill="#0a1524">кода диагноза</text><rect x="170" y="460" width="420" height="28" rx="14" fill="#12397a" /><rect x="170" y="520" width="300" height="28" rx="14" fill="#dde2ea" /><rect x="170" y="580" width="360" height="28" rx="14" fill="#dde2ea" /><text x="170" y="660" font-size="32" fill="#566174">текст обращения</text></svg>
   </section>
 <!-- seo-tekst:start -->
-  <section id="opis">
-    <h2>Как это работает</h2>
-    <p>Высокотехнологичная медицинская помощь — ВМП, или, как чаще говорят, лечение по квоте, — оказывается по направлению. С 1 сентября 2025 года порядок её организации задаёт приказ Минздрава России от 11.04.2025 № 186н; прежний приказ № 824н с этой даты отменён. Многие инструкции в интернете до сих пор ссылаются на старый порядок.</p>
+  <section id="opis" class="split flip">
+    <div class="stack"><h2>Как это работает</h2></div>
+    <div class="stack">
+      <p>Высокотехнологичная медицинская помощь — ВМП, или, как чаще говорят, лечение по квоте, — оказывается по направлению. С 1 сентября 2025 года порядок её организации задаёт приказ Минздрава России от 11.04.2025 № 186н; прежний приказ № 824н с этой даты отменён. Многие инструкции в интернете до сих пор ссылаются на старый порядок.</p>
     <p>По действующему порядку направление на госпитализацию для оказания ВМП оформляет лечащий врач направляющей медицинской организации, когда есть подтверждённые медицинские показания. Решение о показаниях — за врачом и комиссией. Мы его не принимаем и не оцениваем.</p>
     <p>К направлению прилагаются выписка из медицинских документов с диагнозом и кодом по МКБ, копии документов пациента — паспорта или свидетельства о рождении, номер полиса ОМС и СНИЛС, согласие на обработку персональных данных. Выписку готовит медорганизация, копии и согласие даёт пациент.</p>
     <p>Комплект документов медорганизация представляет в принимающую организацию или в орган управления здравоохранением региона не позднее трёх рабочих дней. Пациент или его законный представитель вправе представить оформленный комплект самостоятельно.</p>
@@ -105,31 +139,34 @@
     <p>Медицинские документы — это сведения о здоровье, особая категория персональных данных. Мы используем их только для проверки комплекта, не передаём третьим лицам и не просим присылать больше, чем нужно.</p>
     <p>Сервис рассчитан на пациентов в России и их родственников, которым врач сказал о лечении по квоте, и на тех, у кого заявка уже застряла. Сейчас он в подготовке: сначала мы проверяем, нужен ли он людям.</p>
     <p>Сервис проверяет документы и сроки по вашим данным. Он не оказывает медицинских услуг, не даёт медицинских советов и не решает вопрос о квоте: показания определяет врач, решение принимает комиссия.</p>
+    </div>
   </section>
   <section id="faq">
-    <h2>Вопросы и ответы</h2>
-    <h3>Кто оформляет направление на ВМП?</h3>
-    <p>Лечащий врач направляющей медицинской организации — по порядку, утверждённому приказом Минздрава № 186н.</p>
-    <h3>Какие документы прилагаются к направлению?</h3>
-    <p>Выписка с диагнозом и кодом по МКБ, копии паспорта или свидетельства о рождении, номер полиса ОМС, СНИЛС и согласие на обработку персональных данных.</p>
-    <h3>Сколько ждать решения комиссии?</h3>
-    <p>Не более десяти рабочих дней, для детей до 18 лет — не более трёх рабочих дней.</p>
-    <h3>Вы решаете, положена ли мне квота?</h3>
-    <p>Нет. Показания определяет врач, решение принимает комиссия. Мы проверяем документы и сроки.</p>
-    <h3>Можно уже пользоваться?</h3>
-    <p>Пока нет. Сервис в подготовке, и мы проверяем, нужен ли он людям.</p>
+    <div class="stack"><h2>Вопросы и ответы</h2></div>
+    <div class="rows">
+      <div class="split flip"><h3>Кто оформляет направление на ВМП?</h3><p>Лечащий врач направляющей медицинской организации — по порядку, утверждённому приказом Минздрава № 186н.</p></div>
+      <div class="split flip"><h3>Какие документы прилагаются к направлению?</h3><p>Выписка с диагнозом и кодом по МКБ, копии паспорта или свидетельства о рождении, номер полиса ОМС, СНИЛС и согласие на обработку персональных данных.</p></div>
+      <div class="split flip"><h3>Сколько ждать решения комиссии?</h3><p>Не более десяти рабочих дней, для детей до 18 лет — не более трёх рабочих дней.</p></div>
+      <div class="split flip"><h3>Вы решаете, положена ли мне квота?</h3><p>Нет. Показания определяет врач, решение принимает комиссия. Мы проверяем документы и сроки.</p></div>
+      <div class="split flip"><h3>Можно уже пользоваться?</h3><p>Пока нет. Сервис в подготовке, и мы проверяем, нужен ли он людям.</p></div>
+    </div>
   </section>
 <!-- seo-tekst:end -->
-  <section id="start" data-view="start_view">
-    <h2>Пришлите то, что уже собрано</h2>
-    <p><label>Что сейчас с квотой<br><select data-ev-focus="form_start" style="margin-top:6px;padding:8px;font-size:16px"><option value="">— выберите —</option><option>Врач сказал о квоте</option><option>Собираю документы</option><option>Документы отправлены, ответа нет</option><option>Пришёл отказ</option></select></label></p>
-    <a class="cta" href="price.html" data-ev="form_submit_click">Начать</a>
+  <section id="start" data-view="start_view" class="split">
+    <div class="stack">
+      <h2>Пришлите то, что уже собрано</h2>
+    </div>
+    <div class="tile stack">
+      <label>Что сейчас с квотой<select data-ev-focus="form_start"><option value="">— выберите —</option><option>Врач сказал о квоте</option><option>Собираю документы</option><option>Документы отправлены, ответа нет</option><option>Пришёл отказ</option></select></label>
+      <a class="button" href="price.html" data-ev="form_submit_click">Начать</a>
+    </div>
   </section>
-</div>
+</main>
 
-<footer><div class="wrap">
+<footer><div class="shell">
+  <p><b>Положено</b></p>
   <p>Оператор: ИП Гудев Роман, ИНН 615007167949 &middot; <a href="privacy.html" data-ev="click_legal_privacy">Политика обработки персональных данных</a></p>
-  <p class="muted">Проверка комплекта документов и сроков по вашим данным. Не медицинская услуга и не медицинский совет; показания определяет врач, решение о квоте принимает комиссия.</p>
+  <p>Проверка комплекта документов и сроков по вашим данным. Не медицинская услуга и не медицинский совет; показания определяет врач, решение о квоте принимает комиссия.</p>
 </div></footer>
 
 </body>
